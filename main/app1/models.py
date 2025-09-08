@@ -9,3 +9,8 @@ class Tour(models.Model):
     price = models.IntegerField()
     image = models.ImageField(upload_to='images/')
     description = models.TextField()
+
+    def __str__(self):
+            return (f"ID:{self.id} : from {self.origin_country} to "
+                    f"{self.destination_country} , for a duration of {self.duration} "
+                    f"days at the price of {self.price} INR ")

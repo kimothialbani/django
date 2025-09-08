@@ -1,8 +1,20 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+from .models import Tour
+
+
+# from django.http import HttpResponse
 
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the app1 index.")
+
+    tours = Tour.objects.all()
+
+    context = {'tours': tours}
+
+    return render(request, 'tours/index.html', context)
+
+
+
 
