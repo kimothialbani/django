@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1.apps.App1Config','app2.apps.App2Config',
+    'app_form.apps.FormAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -120,7 +121,7 @@ STATIC_URL = 'static/'
 # MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
 )
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

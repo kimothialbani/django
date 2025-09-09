@@ -11,9 +11,9 @@ def index(request):
 
     tours = Tour.objects.all()
 
-    context = {'tours': tours}
+    context = {'app_app1': tours}
 
-    return render(request, 'tours/index.html', context)
+    return render(request, 'app_app1/index.html', context)
 
 
 
