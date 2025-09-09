@@ -7,7 +7,7 @@ class Tour(models.Model):
     destination_country = models.CharField(max_length=100)
     duration = models.IntegerField()
     price = models.IntegerField()
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
     description = models.TextField()
 
     def __str__(self):
